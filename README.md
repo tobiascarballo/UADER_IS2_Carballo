@@ -15,7 +15,7 @@ La estructura del proyecto es la siguiente:
 - 📂 `script/` - Scripts útiles para automatización.
 
 ## Imagen representativa de la materia
-![Imagen de IS2](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fes%2Fsearch%3Fq%3DIngenier%25C3%25ADa%2Bde%2Bsoftware&psig=AOvVaw1ZiHEsfAcQ48cB2sISeJXo&ust=1742870546034000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCP0rLZoYwDFQAAAAAdAAAAABAE)
+![Imagen de IS2](imagen_readme.png)
 
 ## Link representativo de la materia
 [Link que lleva directamente hacia la web python oficial](https://www.python.org/)
