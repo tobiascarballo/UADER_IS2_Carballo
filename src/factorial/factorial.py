@@ -6,6 +6,7 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
+
 def factorial(num): 
     if num < 0: 
         print("Factorial de un número negativo no existe")
@@ -19,9 +20,14 @@ def factorial(num):
             num -= 1
         return fact 
 
-# Modificación para solicitar el número si se omite
+# Modificación para aceptar rango desde-hasta
 if len(sys.argv) == 1:
     num = int(input("Por favor, ingrese un número para calcular su factorial: "))
+elif '-' in sys.argv[1]:
+    inicio, fin = map(int, sys.argv[1].split('-'))
+    for i in range(inicio, fin + 1):
+        print(f"El factorial de {i} es: {factorial(i)}")
+    sys.exit()
 else:
     num = int(sys.argv[1])
 
