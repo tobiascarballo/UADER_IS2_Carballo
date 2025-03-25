@@ -7,6 +7,7 @@
 #*-------------------------------------------------------------------------*
 import sys
 
+# Función para calcular el factorial de un número
 def factorial(num): 
     if num < 0: 
         print("Factorial de un número negativo no existe")
@@ -20,14 +21,26 @@ def factorial(num):
             num -= 1
         return fact 
 
-# Modificación para aceptar rango desde-hasta
+# Lógica para recibir un número o un rango de números
 if len(sys.argv) == 1:
     num = int(input("Por favor, ingrese un número para calcular su factorial: "))
 elif '-' in sys.argv[1]:
-    inicio, fin = map(int, sys.argv[1].split('-'))
-    for i in range(inicio, fin + 1):
-        print(f"El factorial de {i} es: {factorial(i)}")
-    sys.exit()
+    rango = sys.argv[1]
+    if rango.startswith('-'):  # Caso sin límite inferior
+        fin = int(rango[1:])
+        for i in range(1, fin + 1):
+            print(f"El factorial de {i} es: {factorial(i)}")
+        sys.exit()
+    elif rango.endswith('-'):  # Caso sin límite superior
+        inicio = int(rango[:-1])
+        for i in range(inicio, 61):
+            print(f"El factorial de {i} es: {factorial(i)}")
+        sys.exit() 
+    else:
+        inicio, fin = map(int, rango.split('-'))
+        for i in range(inicio, fin + 1):
+            print(f"El factorial de {i} es: {factorial(i)}")
+        sys.exit()
 else:
     num = int(sys.argv[1])
 
